@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Solutions - Presupuesto</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/budget.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- header con navegación fija -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-microchip"></i>
+                    <span>TechHelper</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galería</a></li>
+                    <li><a href="budget.html" class="nav-link active">Presupuesto</a></li>
+                    <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                </ul>
+                   <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Solicitar Presupuesto</h1>
+                <p>Obtén un presupuesto personalizado para tu proyecto</p>
+            </div>
+        </section>
+
+        <section class="budget-section">
+            <div class="container">
+                <form id="budget-form" class="budget-form">
+                    <!-- Datos de Contacto -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-user"></i> Datos de Contacto</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" required maxlength="15">
+                                <span class="error-message" id="nombre-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellidos">Apellidos *</label>
+                                <input type="text" id="apellidos" name="apellidos" required maxlength="40">
+                                <span class="error-message" id="apellidos-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required maxlength="9">
+                                <span class="error-message" id="telefono-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Presupuesto -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-calculator"></i> Configuración del Presupuesto</h2>
+                        
+                        <!-- Selección de Producto -->
+                        <div class="form-group">
+                            <label for="producto">Selecciona el Producto/Servicio *</label>
+                            <select id="producto" name="producto" required>
+                                <option value="">-- Selecciona una opción --</option>
+                                <option value="web" data-price="299">Desarrollo Web - €299</option>
+                                <option value="mobile" data-price="599">Aplicación Móvil - €599</option>
+                                <option value="cloud" data-price="199">Servicios Cloud - €199</option>
+                                <option value="security" data-price="149">Ciberseguridad - €149</option>
+                            </select>
+                        </div>
+
+                        <!-- Plazo de Entrega -->
+                        <div class="form-group">
+                            <label for="plazo">Plazo de Entrega (días) *</label>
+                            <input type="number" id="plazo" name="plazo" min="1" max="365" required>
+                            <small>Mayor plazo = mayor descuento (hasta 20% en 365 días)</small>
+                        </div>
+
+                        <!-- Extras -->
+                        <div class="form-group">
+                            <label>Servicios Adicionales</label>
+                            <div class="extras-grid">
+                                <div class="extra-item">
+                                    <input type="checkbox" id="hosting" name="extras" value="hosting" data-price="50">
+                                    <label for="hosting">
+                                        <i class="fas fa-server"></i>
+                                        Hosting Premium (+€50)
+                                    </label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="ssl" name="extras" value="ssl" data-price="25">
+                                    <label for="ssl">
+                                        <i class="fas fa-lock"></i>
+                                        Certificado SSL (+€25)
+                                    </label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="seo" name="extras" value="seo" data-price="75">
+                                    <label for="seo">
+                                        <i class="fas fa-search"></i>
+                                        Optimización SEO (+€75)
+                                    </label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="backup" name="extras" value="backup" data-price="30">
+                                    <label for="backup">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        Backup Automático (+€30)
+                                    </label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="analytics" name="extras" value="analytics" data-price="40">
+                                    <label for="analytics">
+                                        <i class="fas fa-chart-line"></i>
+                                        Analytics Avanzado (+€40)
+                                    </label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="maintenance" name="extras" value="maintenance" data-price="100">
+                                    <label for="maintenance">
+                                        <i class="fas fa-tools"></i>
+                                        Mantenimiento 1 año (+€100)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resumen del Presupuesto -->
+                        <div class="budget-summary">
+                            <h3><i class="fas fa-receipt"></i> Resumen del Presupuesto</h3>
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span>Producto base:</span>
+                                    <span id="base-price">€0</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Servicios adicionales:</span>
+                                    <span id="extras-price">€0</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Descuento por plazo:</span>
+                                    <span id="discount-amount">€0</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Total:</span>
+                                    <span id="total-price">€0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Condiciones y Envío -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-file-contract"></i> Condiciones y Envío</h2>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="conditions" name="conditions" required>
+                                <label for="conditions">
+                                    He leído y acepto las <a href="#" target="_blank">condiciones de privacidad</a> y <a href="#" target="_blank">términos de servicio</a> *
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" id="reset-btn" class="btn btn-secondary">
+                                <i class="fas fa-redo"></i> Resetear Formulario
+                            </button>
+                            <button type="submit" id="submit-btn" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Enviar Presupuesto
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de confirmación -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSuccessModal()">&times;</span>
+            <div class="success-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>¡Solicitud Recibida!</h2>
+                <p>Hemos recibido tu solicitud de presupuesto. Te contactaremos pronto con toda la información detallada.</p>
+                <div id="budget-details"></div>
+                <button onclick="closeSuccessModal()" class="btn btn-primary">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-microchip"></i>
+                        <span>TechPro Solutions</span>
+                    </div>
+                    <p>Transformando el futuro con tecnología innovadora.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Tecnología 123, Madrid</p>
+                    <p><i class="fas fa-phone"></i> +34 912 345 678</p>
+                    <p><i class="fas fa-envelope"></i> info@techpro.es</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPro Solutions. Todos los derechos reservados. | <a href="#">Aviso Legal</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/budget.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Inteligencia Artificial Revoluciona el Desarrollo Web",
+    "excerpt": "Las nuevas herramientas de IA están transformando la manera en que creamos aplicaciones web, permitiendo un desarrollo más eficiente y personalizado.",
+    "date": "2024-01-15",
+    "category": "Tecnología",
+    "author": "Ana García",
+    "image": "web-ai"
+  },
+  {
+    "id": 2,
+    "title": "Tendencias en Ciberseguridad para 2024",
+    "excerpt": "Descubre las principales amenazas y soluciones de seguridad que marcarán el panorama tecnológico este año.",
+    "date": "2024-01-10",
+    "category": "Seguridad",
+    "author": "Carlos Mendez",
+    "image": "security"
+  },
+  {
+    "id": 3,
+    "title": "Cloud Computing: El Futuro de la Infraestructura",
+    "excerpt": "Las empresas migran masivamente a la nube buscando escalabilidad y eficiencia en sus operaciones digitales.",
+    "date": "2024-01-05",
+    "category": "Cloud",
+    "author": "María López",
+    "image": "cloud"
+  },
+  {
+    "id": 4,
+    "title": "Aplicaciones Móviles: Nuevos Frameworks de Desarrollo",
+    "excerpt": "Comparativa de los últimos frameworks para desarrollo móvil que están ganando popularidad entre los desarrolladores.",
+    "date": "2024-01-02",
+    "category": "Móvil",
+    "author": "David Ruiz",
+    "image": "mobile"
+  },
+  {
+    "id": 5,
+    "title": "Automatización de Procesos con RPA",
+    "excerpt": "Cómo la automatización robótica de procesos está optimizando las operaciones empresariales y reduciendo costos.",
+    "date": "2023-12-28",
+    "category": "Automatización",
+    "author": "Elena Torres",
+    "image": "automation"
+  },
+  {
+    "id": 6,
+    "title": "Blockchain en el Sector Empresarial",
+    "excerpt": "Las aplicaciones prácticas de blockchain más allá de las criptomonedas están revolucionando diversos sectores.",
+    "date": "2023-12-25",
+    "category": "Blockchain",
+    "author": "Roberto Silva",
+    "image": "blockchain"
+  }
+]

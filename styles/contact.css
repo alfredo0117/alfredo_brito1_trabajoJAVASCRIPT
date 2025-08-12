@@ -1,0 +1,475 @@
+/* Estilos para contacto */
+
+.contact-section {
+    padding: 4rem 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Información de contacto */
+.contact-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.contact-info h2 {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    color: var(--white);
+    font-size: 1.25rem;
+}
+
+.contact-details h3 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details p {
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+}
+
+/* Sección del mapa */
+.map-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.map-section h2 {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.map-controls {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.location-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.location-input label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Botones del mapa */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #6b7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: #10b981;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.interactive-map {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* Información de ruta */
+.route-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    display: none;
+}
+
+.route-info.show {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+/* Información de precisión */
+.accuracy-info {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    animation: slideDown 0.3s ease;
+}
+
+.accuracy-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+}
+
+.accuracy-details i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.accuracy-details span {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.accuracy-details small {
+    color: var(--text-light);
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.route-details h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.route-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.route-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.route-stat i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.route-stat span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.route-instructions {
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.route-instructions small {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Loading de ruta */
+.loading-route {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.loading-route i {
+    animation: spin 1s linear infinite;
+}
+
+/* Marcadores personalizados del mapa */
+.business-marker,
+.user-marker {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Sección de redes sociales */
+.social-section {
+    padding: 4rem 0;
+    background: var(--bg-light);
+    text-align: center;
+}
+
+.social-section h2 {
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    text-decoration: none;
+}
+
+.social-card i {
+    font-size: 3rem;
+    transition: var(--transition);
+}
+
+.social-card span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.social-card.facebook:hover { color: #1877f2; }
+.social-card.twitter:hover { color: #1da1f2; }
+.social-card.linkedin:hover { color: #0077b5; }
+.social-card.instagram:hover { color: #e4405f; }
+
+/* Loading del mapa */
+.map-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+}
+
+.map-loading i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    animation: spin 1s linear infinite;
+}
+
+/* Animaciones */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .interactive-map {
+        height: 300px;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-item {
+        padding: 1rem;
+    }
+    
+    .map-section,
+    .contact-info {
+        padding: 1.5rem;
+    }
+    
+    .route-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-card {
+        padding: 1.5rem;
+    }
+    
+    .social-card i {
+        font-size: 2.5rem;
+    }
+    
+    .interactive-map {
+        height: 250px;
+    }
+    
+    .contact-info,
+    .map-section {
+        padding: 1rem;
+    }
+    
+    .map-controls {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .input-group input {
+        font-size: 0.9rem;
+    }
+}
